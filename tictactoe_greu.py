@@ -2,24 +2,24 @@ import tkinter as tk
 import joc_greu as joc
 
 def porneste_joc(cine_incepe):
-    # Ascundem fereastra meniului în loc să o distrugem
+    # Hide the menu window instead of destroying it
     meniu.withdraw() 
     
-    # Pornim jocul cu varianta Imbatabil (Greu) direct
+    # Start the game directly with the Unbeatable (Hard) variant
     joc.start_joc(cine_incepe) 
     
-    # Așteptăm până când fereastra din joc.py este închisă
+    # Wait until the window from joc.py is closed
     meniu.wait_window(joc.fereastra_joc)
     
-    # Reafișăm fereastra meniului principal după terminarea meciului
+    # Redisplay the main menu window after the match ends
     meniu.deiconify()
 
-# --- CREAREA FERESTREI ---
+# --- WINDOW CREATION ---
 meniu = tk.Tk()
 meniu.title("Setări Joc - Mod Imbatabil")
 meniu.geometry("806x650")
 
-# Am păstrat structura ta, dar am adus opțiunile direct pe ecran
+# Maintained your original layout but brought the options directly onto the screen
 frame_inceput = tk.Frame(meniu)
 frame_inceput.pack(pady=80)
 
